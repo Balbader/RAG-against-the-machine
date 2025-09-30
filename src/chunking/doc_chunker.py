@@ -1,3 +1,12 @@
+"""
+Documentation Chunker Module
+
+This module implements chunking for documentation-like text, with a focus on
+Markdown. It segments content semantically by headers and further splits large
+sections by sentences to respect a maximum chunk size. Each chunk is annotated
+with positional metadata for downstream retrieval and indexing.
+"""
+
 import re
 from typing import List, Dict, Any
 from .base import BaseChunker
