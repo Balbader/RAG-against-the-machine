@@ -1,0 +1,16 @@
+{
+  "search_results": [
+    {
+      "question_id": "test_001",
+      "retrieved_sources": [
+        {
+          "file_path": "src/models/data_models.py",
+          "first_character_index": 0,
+          "last_character_index": 100
+        }
+      ],
+      "answer": "This is a sample answer demonstrating structured output."
+    }
+  ],
+  "k": 10
+}

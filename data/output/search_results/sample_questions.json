@@ -1,0 +1,555 @@
+{
+  "search_results": [
+    {
+      "question_id": "q001",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 8542,
+          "last_character_index": 8958
+        },
+        {
+          "file_path": "./TEST_RESULTS_SUMMARY.md",
+          "first_character_index": 1713,
+          "last_character_index": 2587
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496574000,
+          "last_character_index": 496576000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 3166,
+          "last_character_index": 3242
+        },
+        {
+          "file_path": "./IMPLEMENTATION_STATUS.md",
+          "first_character_index": 831,
+          "last_character_index": 1035
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 4000,
+          "last_character_index": 6000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 100000,
+          "last_character_index": 102000
+        }
+      ]
+    },
+    {
+      "question_id": "q002",
+      "retrieved_sources": [
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 8542,
+          "last_character_index": 8958
+        },
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 4853,
+          "last_character_index": 5113
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/pydantic/fields.py",
+          "first_character_index": 52203,
+          "last_character_index": 53626
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 3242,
+          "last_character_index": 3837
+        },
+        {
+          "file_path": "./QUICK_REFERENCE.md",
+          "first_character_index": 653,
+          "last_character_index": 1154
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496574000,
+          "last_character_index": 496576000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 14000,
+          "last_character_index": 16000
+        }
+      ]
+    },
+    {
+      "question_id": "q003",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496574000,
+          "last_character_index": 496576000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 1294,
+          "last_character_index": 1652
+        },
+        {
+          "file_path": "./TEST_RESULTS_SUMMARY.md",
+          "first_character_index": 6585,
+          "last_character_index": 6905
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/scipy-1.16.2.dist-info/LICENSE.txt",
+          "first_character_index": 16000,
+          "last_character_index": 18000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 2000,
+          "last_character_index": 4000
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/numpy/f2py/__init__.py",
+          "first_character_index": 544,
+          "last_character_index": 2027
+        },
+        {
+          "file_path": "./step_by_step.md",
+          "first_character_index": 22854,
+          "last_character_index": 23199
+        }
+      ]
+    },
+    {
+      "question_id": "q004",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 4206,
+          "last_character_index": 4853
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/dspy/adapters/types/history.py",
+          "first_character_index": 0,
+          "last_character_index": 2000
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/openai/types/upload_create_params.py",
+          "first_character_index": 272,
+          "last_character_index": 1131
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/cloudpickle/cloudpickle.py",
+          "first_character_index": 52497,
+          "last_character_index": 53600
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/joblib/externals/cloudpickle/cloudpickle.py",
+          "first_character_index": 52497,
+          "last_character_index": 53600
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/pydantic/dataclasses.py",
+          "first_character_index": 13176,
+          "last_character_index": 13626
+        }
+      ]
+    },
+    {
+      "question_id": "q005",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 14000,
+          "last_character_index": 16000
+        },
+        {
+          "file_path": "./QUICK_REFERENCE.md",
+          "first_character_index": 457,
+          "last_character_index": 553
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 9057,
+          "last_character_index": 9171
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/dspy/predict/program_of_thought.py",
+          "first_character_index": 2166,
+          "last_character_index": 3758
+        },
+        {
+          "file_path": "./README_TESTING.md",
+          "first_character_index": 2270,
+          "last_character_index": 2424
+        },
+        {
+          "file_path": "./.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py",
+          "first_character_index": 28482,
+          "last_character_index": 29215
+        }
+      ]
+    },
+    {
+      "question_id": "q006",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 4206,
+          "last_character_index": 4853
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 5577,
+          "last_character_index": 5784
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 34000,
+          "last_character_index": 36000
+        },
+        {
+          "file_path": "./test_system.py",
+          "first_character_index": 12821,
+          "last_character_index": 14135
+        },
+        {
+          "file_path": "./IMPLEMENTATION_STATUS.md",
+          "first_character_index": 4154,
+          "last_character_index": 4596
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 113524000,
+          "last_character_index": 113526000
+        }
+      ]
+    },
+    {
+      "question_id": "q007",
+      "retrieved_sources": [
+        {
+          "file_path": "./TEST_RESULTS_SUMMARY.md",
+          "first_character_index": 5277,
+          "last_character_index": 5914
+        },
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./README_TESTING.md",
+          "first_character_index": 1640,
+          "last_character_index": 1787
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 104000,
+          "last_character_index": 106000
+        },
+        {
+          "file_path": "./TEST_RESULTS_SUMMARY.md",
+          "first_character_index": 8869,
+          "last_character_index": 9081
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 7186,
+          "last_character_index": 7482
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./test_system.py",
+          "first_character_index": 14136,
+          "last_character_index": 15740
+        }
+      ]
+    },
+    {
+      "question_id": "q008",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./IMPLEMENTATION_STATUS.md",
+          "first_character_index": 1035,
+          "last_character_index": 1303
+        },
+        {
+          "file_path": "./test_system.py",
+          "first_character_index": 4182,
+          "last_character_index": 5836
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 2122,
+          "last_character_index": 2963
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 160208000,
+          "last_character_index": 160210000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 336268000,
+          "last_character_index": 336270000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 88000,
+          "last_character_index": 90000
+        }
+      ]
+    },
+    {
+      "question_id": "q009",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293734000,
+          "last_character_index": 293736000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 1294,
+          "last_character_index": 1652
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 2000,
+          "last_character_index": 4000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 30000,
+          "last_character_index": 32000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 66000,
+          "last_character_index": 68000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 336250000,
+          "last_character_index": 336252000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 0,
+          "last_character_index": 2000
+        }
+      ]
+    },
+    {
+      "question_id": "q010",
+      "retrieved_sources": [
+        {
+          "file_path": "./data/datasets/sample_questions.json",
+          "first_character_index": 0,
+          "last_character_index": 1150
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 496576000,
+          "last_character_index": 496578000
+        },
+        {
+          "file_path": "./TEST_RESULTS_SUMMARY.md",
+          "first_character_index": 9964,
+          "last_character_index": 10326
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 116584000,
+          "last_character_index": 116586000
+        },
+        {
+          "file_path": "./TESTING_GUIDE.md",
+          "first_character_index": 4206,
+          "last_character_index": 4853
+        },
+        {
+          "file_path": "./step_by_step.md",
+          "first_character_index": 225,
+          "last_character_index": 481
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 34000,
+          "last_character_index": 36000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 293736000,
+          "last_character_index": 293738000
+        },
+        {
+          "file_path": "./data/indexes/chunks.json",
+          "first_character_index": 112000,
+          "last_character_index": 114000
+        },
+        {
+          "file_path": "./step_by_step.md",
+          "first_character_index": 26653,
+          "last_character_index": 27142
+        }
+      ]
+    }
+  ],
+  "k": 10
+}
