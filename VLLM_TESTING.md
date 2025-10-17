@@ -11,6 +11,7 @@ python test_vllm.py
 ```
 
 This will:
+
 1. ✅ Index the entire VLLM 0.10.1 repository
 2. ✅ Run sample searches on VLLM-specific topics
 3. ✅ Generate answers about VLLM features (requires Ollama)
@@ -27,12 +28,14 @@ python -m src index "VLLM 0.10.1/vllm-0.10.1"
 ```
 
 **What this does:**
+
 - Discovers all Python files, documentation, and configs
 - Creates intelligent chunks (AST for code, headers for docs)
 - Builds BM25 search index
 - Saves to `data/indexes/`
 
 **Expected output:**
+
 ```
 Starting repository indexing...
 Processing files: 100%|██████████| XXXX/XXXX
@@ -63,6 +66,7 @@ python -m src search "How does continuous batching work?" --k 10
 ```
 
 **What to verify:**
+
 - ✅ Relevant code files retrieved
 - ✅ Documentation chunks included
 - ✅ BM25 scores ranking correctly
@@ -73,6 +77,7 @@ python -m src search "How does continuous batching work?" --k 10
 ### Step 3: Generate Answers about VLLM
 
 **Prerequisites:**
+
 ```bash
 # Ensure Ollama is running
 ollama serve
@@ -82,6 +87,7 @@ ollama list | grep qwen3
 ```
 
 **Generate answers:**
+
 ```bash
 # Ask about vLLM features
 python -m src answer "What is vLLM and what are its main features?" --k 10
@@ -97,6 +103,7 @@ python -m src answer "How do I deploy vLLM with OpenAI API?" --k 10
 ```
 
 **What to verify:**
+
 - ✅ Context retrieved from VLLM docs/code
 - ✅ Answers reference specific VLLM features
 - ✅ Citations include source files
@@ -144,6 +151,7 @@ python -m src answer_dataset data/datasets/vllm_questions.json --k 10
 Here are curated queries that demonstrate RAG capabilities on VLLM:
 
 ### Architecture & Design
+
 ```bash
 python -m src search "PagedAttention memory management" --k 5
 python -m src search "KV cache implementation details" --k 5
@@ -151,6 +159,7 @@ python -m src search "Continuous batching algorithm" --k 5
 ```
 
 ### Distributed Inference
+
 ```bash
 python -m src search "Tensor parallelism in vLLM" --k 5
 python -m src search "Pipeline parallelism configuration" --k 5
@@ -158,6 +167,7 @@ python -m src search "Multi-GPU setup and communication" --k 5
 ```
 
 ### Model Support
+
 ```bash
 python -m src search "Supported model architectures" --k 5
 python -m src search "Adding new model to vLLM" --k 5
@@ -165,6 +175,7 @@ python -m src search "Model loading and initialization" --k 5
 ```
 
 ### Quantization
+
 ```bash
 python -m src search "AWQ quantization support" --k 5
 python -m src search "GPTQ quantization implementation" --k 5
@@ -172,6 +183,7 @@ python -m src search "Quantization performance impact" --k 5
 ```
 
 ### Deployment
+
 ```bash
 python -m src search "OpenAI API compatibility" --k 5
 python -m src search "Docker deployment guide" --k 5
@@ -183,17 +195,20 @@ python -m src search "Production deployment best practices" --k 5
 ## Expected Results
 
 ### Indexing Performance
+
 - **Files:** ~2,000-3,000 files (Python, Markdown, YAML, etc.)
 - **Chunks:** ~50,000-100,000 chunks
 - **Time:** 30-120 seconds (depends on system)
 - **Vocabulary:** 100,000-200,000 unique tokens
 
 ### Search Performance
+
 - **Retrieval time:** < 2 seconds per query
 - **Relevant results:** Code + docs mixed appropriately
 - **Top results:** Specific to query (not generic)
 
 ### Answer Quality
+
 - **Context:** Drawn from VLLM source code and docs
 - **Accuracy:** Technical details correct
 - **Citations:** Include specific file names
@@ -206,6 +221,7 @@ python -m src search "Production deployment best practices" --k 5
 After running tests, check these locations:
 
 ### If using test_vllm.py:
+
 ```
 data/vllm_tests/
 ├── vllm_search_results.json    # Search results
@@ -214,6 +230,7 @@ data/vllm_tests/
 ```
 
 ### If using CLI directly:
+
 ```
 data/
 ├── vllm_indexes/               # VLLM index files
@@ -314,6 +331,7 @@ After testing on VLLM, verify:
 ### Issue: "VLLM repository not found"
 
 **Solution:**
+
 ```bash
 # Check the folder exists
 ls -la "VLLM 0.10.1/vllm-0.10.1/"
@@ -325,6 +343,7 @@ ls -la "VLLM 0.10.1/vllm-0.10.1/"
 ### Issue: Too many files, slow indexing
 
 **Solution:**
+
 ```bash
 # Exclude directories you don't need
 # Edit src/indexing/indexer.py, add to skip list:
@@ -334,6 +353,7 @@ ls -la "VLLM 0.10.1/vllm-0.10.1/"
 ### Issue: Ollama timeout during answer generation
 
 **Solution:**
+
 ```bash
 # Use a faster model
 # Edit src/generation/llm_client.py:
@@ -348,14 +368,14 @@ ls -la "VLLM 0.10.1/vllm-0.10.1/"
 
 ### For VLLM 0.10.1 Repository
 
-| Metric | Expected Range |
-|--------|---------------|
-| Files to index | 2,000-3,000 |
-| Total chunks | 50,000-100,000 |
-| Indexing time | 30-120 seconds |
-| Vocabulary size | 100K-200K tokens |
-| Search time/query | 0.5-2 seconds |
-| Answer generation | 5-30 seconds |
+| Metric            | Expected Range   |
+| ----------------- | ---------------- |
+| Files to index    | 2,000-3,000      |
+| Total chunks      | 50,000-100,000   |
+| Indexing time     | 30-120 seconds   |
+| Vocabulary size   | 100K-200K tokens |
+| Search time/query | 0.5-2 seconds    |
+| Answer generation | 5-30 seconds     |
 
 ---
 
@@ -383,6 +403,7 @@ Create ground truth for VLLM-specific questions:
 ```
 
 Then measure recall:
+
 ```bash
 python -m src measure_recall_at_k_on_dataset \
   data/output/search_results/vllm_questions.json \
@@ -506,9 +527,9 @@ vLLM supports tensor and pipeline...
 ## Documentation
 
 For more information:
+
 - General testing: `README_TESTING.md`
 - Complete guide: `TESTING_GUIDE.md`
-- Implementation: `IMPLEMENTATION_STATUS.md`
 
 ---
 
