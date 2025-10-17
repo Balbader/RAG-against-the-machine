@@ -29,25 +29,31 @@ python -m src search_dataset data/datasets/vllm_questions.json
 ## 📚 Complete Testing Options
 
 ### Option 1: Test on This Repository (RAG System Itself)
+
 ```bash
 python test_system.py
 ```
+
 - Tests all 7 capabilities
 - Indexes this RAG codebase
 - Generates comprehensive report
 
 ### Option 2: Test on VLLM Repository
+
 ```bash
 python test_vllm.py
 ```
+
 - Indexes VLLM 0.10.1 codebase
 - Runs VLLM-specific queries
 - Generates answers about VLLM
 
 ### Option 3: Quick Demo
+
 ```bash
 ./quick_demo.sh
 ```
+
 - Fast demonstration
 - Shows core features
 - 5-minute overview
@@ -91,15 +97,15 @@ RAG-against-the-machine/
 
 ## ✅ All 7 Capabilities Implemented & Tested
 
-| # | Capability | Status | Performance |
-|---|------------|--------|-------------|
-| 1 | **Building Indexed Knowledge Base** | ✅ | 233k chunks in 70s |
-| 2 | **Intelligent Chunking Strategies** | ✅ | AST + header-based |
-| 3 | **Retrieval and Ranking** | ✅ | 1.4s per query |
-| 4 | **LLM Context Management** | ✅ | Ollama integrated |
-| 5 | **Structured JSON Output** | ✅ | Pydantic validated |
-| 6 | **Comprehensive CLI Interface** | ✅ | 6 commands |
-| 7 | **Evaluation Metrics** | ✅ | Overlap & recall@k |
+| #   | Capability                          | Status | Performance        |
+| --- | ----------------------------------- | ------ | ------------------ |
+| 1   | **Building Indexed Knowledge Base** | ✅     | 233k chunks in 70s |
+| 2   | **Intelligent Chunking Strategies** | ✅     | AST + header-based |
+| 3   | **Retrieval and Ranking**           | ✅     | 1.4s per query     |
+| 4   | **LLM Context Management**          | ✅     | Ollama integrated  |
+| 5   | **Structured JSON Output**          | ✅     | Pydantic validated |
+| 6   | **Comprehensive CLI Interface**     | ✅     | 6 commands         |
+| 7   | **Evaluation Metrics**              | ✅     | Overlap & recall@k |
 
 ---
 
@@ -130,12 +136,14 @@ python -m src measure_recall_at_k_on_dataset results.json truth.json
 ## 📊 Test Results
 
 ### On This Repository (233,454 chunks)
+
 - ✅ 7/7 tests passed
 - ✅ Indexing: 69.84 seconds
 - ✅ Search: 1.43 seconds average
 - ✅ All capabilities verified
 
 ### On VLLM Repository (expected ~87,000 chunks)
+
 - ✅ Can index large codebases
 - ✅ Retrieves relevant code + docs
 - ✅ Handles technical queries
@@ -146,25 +154,24 @@ python -m src measure_recall_at_k_on_dataset results.json truth.json
 ## 📖 Documentation Map
 
 ### Quick Start
+
 1. **README_TESTING.md** - How to run tests (5 min read)
 2. **QUICK_REFERENCE.md** - One-page command reference
 
 ### Detailed Guides
+
 3. **VLLM_TESTING.md** - Testing on VLLM repository
 4. **TESTING_GUIDE.md** - Complete testing procedures (60+ pages)
 5. **TEST_RESULTS_SUMMARY.md** - Actual execution results
-
-### Technical Details
-6. **IMPLEMENTATION_STATUS.md** - What's implemented
-7. **step_by_step.md** - Development guide
-8. **CLAUDE.md** - Project overview
 
 ---
 
 ## 🎓 What Each Test Proves
 
 ### test_system.py (Tests on RAG codebase)
+
 Proves the system can:
+
 - ✅ Index its own codebase
 - ✅ Chunk Python code intelligently (AST-based)
 - ✅ Chunk Markdown docs by headers
@@ -175,7 +182,9 @@ Proves the system can:
 - ✅ Calculate evaluation metrics
 
 ### test_vllm.py (Tests on VLLM codebase)
+
 Proves the system can:
+
 - ✅ Handle large repositories (2,000+ files)
 - ✅ Index complex ML codebases
 - ✅ Retrieve technical information accurately
@@ -187,11 +196,13 @@ Proves the system can:
 ## 🔧 Setup Requirements
 
 ### Required
+
 ```bash
 pip install pydantic fire tqdm ollama
 ```
 
 ### For LLM Features (optional)
+
 ```bash
 # Start Ollama
 ollama serve
@@ -245,12 +256,13 @@ After running tests, you should have:
 
 ## 📈 Performance Benchmarks
 
-| Repository | Files | Chunks | Index Time | Search Time |
-|------------|-------|--------|------------|-------------|
-| RAG System | 11,624 | 233,454 | 70 sec | 1.4 sec |
-| VLLM 0.10.1 | ~2,847 | ~87,000 | ~48 sec | ~0.9 sec |
+| Repository  | Files  | Chunks  | Index Time | Search Time |
+| ----------- | ------ | ------- | ---------- | ----------- |
+| RAG System  | 11,624 | 233,454 | 70 sec     | 1.4 sec     |
+| VLLM 0.10.1 | ~2,847 | ~87,000 | ~48 sec    | ~0.9 sec    |
 
 Both meet performance targets:
+
 - ✅ Indexing < 5 minutes
 - ✅ Retrieval < 1 minute
 
@@ -258,11 +270,11 @@ Both meet performance targets:
 
 ## 🐛 Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| Ollama error | `ollama serve` |
-| Import error | `pip install pydantic fire tqdm ollama` |
-| No index found | Run `python -m src index .` first |
+| Problem        | Solution                                    |
+| -------------- | ------------------------------------------- |
+| Ollama error   | `ollama serve`                              |
+| Import error   | `pip install pydantic fire tqdm ollama`     |
+| No index found | Run `python -m src index .` first           |
 | VLLM not found | Check path: `ls "VLLM 0.10.1/vllm-0.10.1/"` |
 
 ---
@@ -270,6 +282,7 @@ Both meet performance targets:
 ## 🎉 What You Have Now
 
 ### Fully Working RAG System
+
 - ✅ Complete implementation (Phases 1-8)
 - ✅ All 7 capabilities verified
 - ✅ Tested on 2 repositories
@@ -277,12 +290,14 @@ Both meet performance targets:
 - ✅ Production-ready
 
 ### Comprehensive Testing Framework
+
 - ✅ Automated test suite (`test_system.py`)
 - ✅ VLLM-specific tests (`test_vllm.py`)
 - ✅ Quick demo script (`quick_demo.sh`)
 - ✅ Sample datasets included
 
 ### Complete Documentation
+
 - ✅ 8 documentation files
 - ✅ Quick start guides
 - ✅ Detailed procedures
@@ -331,16 +346,19 @@ cat README_TESTING.md
 ## 📞 Getting Help
 
 ### Quick References
+
 - **One-pager:** `QUICK_REFERENCE.md`
 - **VLLM guide:** `VLLM_TESTING.md`
 - **Quick start:** `README_TESTING.md`
 
 ### Detailed Guides
+
 - **Complete testing:** `TESTING_GUIDE.md` (60+ pages)
 - **Test results:** `TEST_RESULTS_SUMMARY.md`
 - **Implementation:** `IMPLEMENTATION_STATUS.md`
 
 ### Command Help
+
 ```bash
 # CLI help
 python -m src --help
@@ -355,6 +373,7 @@ python test_vllm.py --help
 ## ✨ Final Notes
 
 Your RAG system is:
+
 - ✅ **Fully implemented** with all required features
 - ✅ **Thoroughly tested** on multiple repositories
 - ✅ **Well documented** with 8 comprehensive guides
