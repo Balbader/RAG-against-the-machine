@@ -162,7 +162,6 @@ python -m src measure_recall_at_k_on_dataset results.json truth.json
 
 3. **VLLM_TESTING.md** - Testing on VLLM repository
 4. **TESTING_GUIDE.md** - Complete testing procedures (60+ pages)
-5. **TEST_RESULTS_SUMMARY.md** - Actual execution results
 
 ---
 
@@ -300,7 +299,6 @@ Both meet performance targets:
 
 - ✅ Quick start guides
 - ✅ Detailed procedures
-- ✅ Test results & reports
 
 ---
 
