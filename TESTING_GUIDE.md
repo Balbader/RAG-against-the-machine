@@ -5,6 +5,7 @@ This guide explains how to test and demonstrate all capabilities of the RAG Agai
 ## Overview
 
 The system has been designed to demonstrate:
+
 1. **Building indexed knowledge base** from repository files (code + docs)
 2. **Intelligent chunking strategies** for different file types
 3. **Retrieval and ranking** with BM25 algorithm
@@ -26,6 +27,7 @@ python test_system.py
 This will execute 7 comprehensive tests covering all system capabilities and generate a detailed report.
 
 **Expected output:**
+
 - ✅ 7 tests passed
 - Performance metrics for indexing, retrieval, and LLM generation
 - Test report saved to `data/output/test_report.json`
@@ -39,6 +41,7 @@ Run a streamlined demo showing core functionality:
 ```
 
 This demonstrates:
+
 - Repository indexing
 - Single search query
 - LLM answer generation
@@ -50,12 +53,14 @@ This demonstrates:
 ### Test 1: Intelligent Chunking Strategies
 
 **What it demonstrates:**
+
 - AST-based Python code chunking
 - Header-based Markdown documentation chunking
 - Fallback mechanisms for malformed code
 - Semantic chunk boundaries
 
 **How to test:**
+
 ```python
 from src.chunking.code_chunker import PythonCodeChunker
 from src.chunking.doc_chunker import MarkdownChunker
@@ -70,6 +75,7 @@ chunks = doc_chunker.chunk_content(markdown_content, "README.md")
 ```
 
 **Expected results:**
+
 - Python code split into functions and classes
 - Markdown split by headers (# ## ###)
 - Each chunk includes metadata: file_path, start_char, end_char, chunk_type
@@ -77,6 +83,7 @@ chunks = doc_chunker.chunk_content(markdown_content, "README.md")
 ### Test 2: Building Indexed Knowledge Base
 
 **What it demonstrates:**
+
 - Repository file discovery and filtering
 - Multi-format support (.py, .md, .rst, .txt, .yaml, .yml, .json)
 - Progress tracking with tqdm
@@ -84,11 +91,13 @@ chunks = doc_chunker.chunk_content(markdown_content, "README.md")
 - Index persistence to disk
 
 **CLI command:**
+
 ```bash
 python -m src index .
 ```
 
 **What to verify:**
+
 - ✅ Progress bar shows file processing
 - ✅ Multiple file types are indexed
 - ✅ Index files created in `data/indexes/`:
@@ -97,6 +106,7 @@ python -m src index .
 - ✅ Performance: Indexing should complete in < 5 minutes
 
 **Expected output structure:**
+
 ```
 Starting repository indexing...
 Processing files: 100%|██████████| 11624/11624 [00:58<00:00]
@@ -108,12 +118,14 @@ Index saved to data/indexes
 ### Test 3: Retrieval and Ranking
 
 **What it demonstrates:**
+
 - BM25 ranking algorithm
 - Fast retrieval (< 1 minute per question)
 - Top-k result selection
 - Score-based ranking
 
 **CLI commands:**
+
 ```bash
 # Single search
 python -m src search "How does BM25 retrieval work?" --k 5
@@ -123,12 +135,14 @@ python -m src search "What are Pydantic models?" --k 10
 ```
 
 **What to verify:**
+
 - ✅ Top-k results returned (default k=10)
 - ✅ Results ranked by BM25 score (descending)
 - ✅ Retrieval time < 1 minute
 - ✅ Results saved to `data/output/search_results/single_query.json`
 
 **Expected JSON format:**
+
 ```json
 {
   "search_results": [
@@ -150,6 +164,7 @@ python -m src search "What are Pydantic models?" --k 10
 ### Test 4: LLM Context Management & Answer Generation
 
 **What it demonstrates:**
+
 - Retrieval of relevant context chunks
 - Context size management (fits within LLM limits)
 - Top-5 chunk selection for optimal context
@@ -157,6 +172,7 @@ python -m src search "What are Pydantic models?" --k 10
 - Answer generation < 1.8 seconds per question
 
 **Prerequisites:**
+
 ```bash
 # Ensure Ollama is running
 ollama serve
@@ -166,11 +182,13 @@ ollama list | grep qwen3
 ```
 
 **CLI command:**
+
 ```bash
 python -m src answer "What is the purpose of this RAG system?" --k 10
 ```
 
 **What to verify:**
+
 - ✅ Ollama connection successful
 - ✅ Context chunks retrieved (top 5 used)
 - ✅ Total context size < 8000 characters
@@ -178,6 +196,7 @@ python -m src answer "What is the purpose of this RAG system?" --k 10
 - ✅ Answer saved to `data/output/answers/single_query.json`
 
 **Expected JSON format:**
+
 ```json
 {
   "search_results": [
@@ -194,12 +213,14 @@ python -m src answer "What is the purpose of this RAG system?" --k 10
 ### Test 5: Structured JSON Output
 
 **What it demonstrates:**
+
 - Pydantic model validation
 - Strict schema compliance
 - Multiple output formats (SearchResults, Answers)
 - JSON serialization
 
 **Test with Python:**
+
 ```python
 from src.models.data_models import *
 
@@ -222,6 +243,7 @@ print(json.dumps(results.model_dump(), indent=2))
 ```
 
 **What to verify:**
+
 - ✅ All models validate input
 - ✅ Required fields enforced
 - ✅ JSON output properly formatted
@@ -230,6 +252,7 @@ print(json.dumps(results.model_dump(), indent=2))
 ### Test 6: Comprehensive CLI Interface
 
 **What it demonstrates:**
+
 - Complete CLI with Fire
 - All CRUD operations
 - Batch processing capabilities
@@ -260,6 +283,7 @@ python -m src measure_recall_at_k_on_dataset \
 ```
 
 **What to verify:**
+
 - ✅ All commands execute without errors
 - ✅ Help available: `python -m src --help`
 - ✅ Progress bars for long operations
@@ -269,12 +293,14 @@ python -m src measure_recall_at_k_on_dataset \
 ### Test 7: Evaluation Metrics
 
 **What it demonstrates:**
+
 - Character-level overlap calculation
 - Recall@k metric (5% overlap threshold)
 - Dataset-wide evaluation
 - Performance benchmarking
 
 **Test overlap calculation:**
+
 ```python
 from src.evaluation.metrics import calculate_overlap
 from src.models.data_models import MinimalSource
@@ -291,6 +317,7 @@ overlap = calculate_overlap(source1, source2)
 ```
 
 **Test recall@k:**
+
 ```python
 from src.evaluation.metrics import calculate_recall_at_k
 
@@ -302,6 +329,7 @@ recall = calculate_recall_at_k(retrieved, correct, overlap_threshold=0.05)
 ```
 
 **CLI evaluation:**
+
 ```bash
 # First, generate search results
 python -m src search_dataset data/datasets/sample_questions.json
@@ -313,6 +341,7 @@ python -m src measure_recall_at_k_on_dataset \
 ```
 
 **What to verify:**
+
 - ✅ Overlap calculated correctly (0.0 to 1.0)
 - ✅ Recall@k uses 5% threshold
 - ✅ Results displayed as percentage
@@ -322,14 +351,15 @@ python -m src measure_recall_at_k_on_dataset \
 
 According to the project requirements, verify these metrics:
 
-| Metric | Target | How to Measure |
-|--------|--------|----------------|
-| Indexing time | < 5 minutes | Check test_system.py output |
-| Retrieval time | < 1 minute per question | Check retrieval_times in report |
-| Answer generation | < 1.8 seconds per question | Check llm_generation_time |
-| Recall@5 (BM25) | ≥ 75% | Run measure_recall_at_k_on_dataset |
+| Metric            | Target                     | How to Measure                     |
+| ----------------- | -------------------------- | ---------------------------------- |
+| Indexing time     | < 5 minutes                | Check test_system.py output        |
+| Retrieval time    | < 1 minute per question    | Check retrieval_times in report    |
+| Answer generation | < 1.8 seconds per question | Check llm_generation_time          |
+| Recall@5 (BM25)   | ≥ 75%                      | Run measure_recall_at_k_on_dataset |
 
 **View performance report:**
+
 ```bash
 cat data/output/test_report.json
 ```
@@ -355,6 +385,7 @@ A sample dataset is provided at `data/datasets/sample_questions.json`:
 ```
 
 **Process this dataset:**
+
 ```bash
 # Generate search results
 python -m src search_dataset data/datasets/sample_questions.json --k 10
@@ -368,6 +399,7 @@ python -m src answer_dataset data/datasets/sample_questions.json --k 10
 ### Issue: Ollama connection failed
 
 **Solution:**
+
 ```bash
 # Start Ollama service
 ollama serve
@@ -382,6 +414,7 @@ curl http://localhost:11434/api/tags
 ### Issue: Index not found
 
 **Solution:**
+
 ```bash
 # Create index first
 python -m src index .
@@ -393,6 +426,7 @@ ls -la data/indexes/
 ### Issue: Import errors
 
 **Solution:**
+
 ```bash
 # Install dependencies
 pip install pydantic fire tqdm ollama
@@ -404,11 +438,13 @@ uv pip install pydantic fire tqdm ollama
 ### Issue: Slow indexing
 
 **Causes:**
+
 - Large repository with many files
 - Slow disk I/O
 - Complex file parsing
 
 **Solutions:**
+
 - Use SSD for faster I/O
 - Exclude unnecessary directories (.git, node_modules)
 - Increase chunk size to reduce total chunks
@@ -514,6 +550,5 @@ Running `python test_system.py` provides comprehensive verification of all syste
 ✅ Evaluation and performance metrics
 
 For questions or issues, refer to:
+
 - `IMPLEMENTATION_STATUS.md` - Implementation details
-- `step_by_step.md` - Step-by-step guide
-- `CLAUDE.md` - Project overview
