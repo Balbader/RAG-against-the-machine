@@ -17,7 +17,7 @@ class RepositoryIndexer:
         self.chunks = []
 
     def index_repository(self, repo_path: str,
-                         output_dir: str = "data/indexes"):
+                        output_dir: str = "data/indexes"):
         """Index entire repository"""
         print("Starting repository indexing...")
 
@@ -31,7 +31,7 @@ class RepositoryIndexer:
             all_chunks.extend(chunks)
 
         print(f"Created {len(all_chunks)}\
-              chunks from {len(files_to_index)} files")
+            chunks from {len(files_to_index)} files")
 
         # Index with BM25
         print("Building BM25 index...")
@@ -50,7 +50,7 @@ class RepositoryIndexer:
         for root, _, filenames in os.walk(repo_path):
             # Skip common non-source directories
             if any(skip in root for skip in
-                   ['.git', '__pycache__', '.pytest_cache', 'node_modules']):
+                ['.git', '__pycache__', '.pytest_cache', 'node_modules']):
                 continue
 
             for filename in filenames:
