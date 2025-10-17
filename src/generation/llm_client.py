@@ -13,27 +13,21 @@ class OllamaClient:
         # Build context from chunks
         context_parts = []
         for i, chunk in enumerate(context_chunks[:5]):  # Limit context size
-            context_parts.append(f"Source {i+1}\
-                                ({chunk['file_path']}):\n{chunk['content']}\n")
+            context_parts.append(f"Source {i+1} ({chunk['file_path']}):\n{chunk['content']}\n")
 
         context = "\n---\n".join(context_parts)
 
         # Create prompt
-        prompt = f"""
-            Based on the following context from a code repository,
-            answer the question below.
+        prompt = f"""Based on the following context from a code repository, answer the question below.
 
-            Context:
-            {context}
+Context:
+{context}
 
-            Question: {question}
+Question: {question}
 
-            Please provide a comprehensive answer based only on the information
-            in the context above. If the context doesn't contain enough
-            information to answer the question, please say so.
+Please provide a comprehensive answer based only on the information in the context above. If the context doesn't contain enough information to answer the question, please say so.
 
-            Answer:
-        """
+Answer:"""
 
         try:
             response = chat(

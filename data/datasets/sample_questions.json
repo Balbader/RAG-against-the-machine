@@ -1,0 +1,44 @@
+{
+  "rag_questions": [
+    {
+      "question_id": "q001",
+      "question": "How does the BM25 retrieval algorithm work in this system?"
+    },
+    {
+      "question_id": "q002",
+      "question": "What Pydantic models are used for data validation?"
+    },
+    {
+      "question_id": "q003",
+      "question": "How does the system chunk Python code files?"
+    },
+    {
+      "question_id": "q004",
+      "question": "What is the purpose of the RepositoryIndexer class?"
+    },
+    {
+      "question_id": "q005",
+      "question": "How does the OllamaClient generate answers?"
+    },
+    {
+      "question_id": "q006",
+      "question": "What CLI commands are available in the RAG system?"
+    },
+    {
+      "question_id": "q007",
+      "question": "How is recall@k calculated in the evaluation metrics?"
+    },
+    {
+      "question_id": "q008",
+      "question": "What file types does the indexer support?"
+    },
+    {
+      "question_id": "q009",
+      "question": "How does the system handle Markdown documentation?"
+    },
+    {
+      "question_id": "q010",
+      "question": "What are the performance targets for the RAG system?"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[project]
+name = "rag-against-the-machine"
+version = "0.1.0"
+description = "A RAG (Retrieval-Augmented Generation) system for code repositories"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "fire>=0.5.0",
+    "tqdm>=4.65.0",
+    "ollama>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []

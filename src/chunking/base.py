@@ -7,6 +7,6 @@ class BaseChunker(ABC):
         self.max_chunk_size = max_chunk_size
 
     @abstractmethod
-    def chunk(self, content: str, file_path: str) -> List[Dict[str, Any]]:
-        """Returns list of chunks with metadata"""
+    def chunk_content(self, content: str, file_path: str) -> List[Dict[str, Any]]:
+        """Return list of chunks with metadata"""
         pass

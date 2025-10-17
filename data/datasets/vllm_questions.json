@@ -1,0 +1,44 @@
+{
+  "rag_questions": [
+    {
+      "question_id": "vllm_001",
+      "question": "How does vLLM implement PagedAttention?"
+    },
+    {
+      "question_id": "vllm_002",
+      "question": "What quantization methods does vLLM support?"
+    },
+    {
+      "question_id": "vllm_003",
+      "question": "How to enable continuous batching in vLLM?"
+    },
+    {
+      "question_id": "vllm_004",
+      "question": "How does vLLM handle distributed inference?"
+    },
+    {
+      "question_id": "vllm_005",
+      "question": "What is the OpenAI compatible server in vLLM?"
+    },
+    {
+      "question_id": "vllm_006",
+      "question": "How to configure tensor parallelism in vLLM?"
+    },
+    {
+      "question_id": "vllm_007",
+      "question": "What are vLLM's key performance optimizations?"
+    },
+    {
+      "question_id": "vllm_008",
+      "question": "How does vLLM manage GPU memory efficiently?"
+    },
+    {
+      "question_id": "vllm_009",
+      "question": "What model architectures are supported by vLLM?"
+    },
+    {
+      "question_id": "vllm_010",
+      "question": "How to deploy vLLM in production environment?"
+    }
+  ]
+}

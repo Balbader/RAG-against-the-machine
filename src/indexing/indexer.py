@@ -30,8 +30,7 @@ class RepositoryIndexer:
             chunks = self._process_file(file_path)
             all_chunks.extend(chunks)
 
-        print(f"Created {len(all_chunks)}\
-            chunks from {len(files_to_index)} files")
+        print(f"Created {len(all_chunks)} chunks from {len(files_to_index)} files")
 
         # Index with BM25
         print("Building BM25 index...")
